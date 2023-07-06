@@ -94,6 +94,18 @@ public class InventoryTest extends BaseTest
 
     }
 
+    @Test
+    public void RemoveProductFromCart()
+    {
+        inventoryPage.clickBackpack();
+        inventoryPage.clickLight();
+        inventoryPage.clickCart();
+        inventoryPage.removeBeckpack();
+
+
+        Assert.assertEquals(inventoryPage.getCartNumber(),"1");
+    }
+
     @AfterMethod
     public void after()
     {
